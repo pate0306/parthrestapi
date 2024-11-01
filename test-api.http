@@ -1,0 +1,49 @@
+# GET root URL
+GET http://localhost:8000/
+Accept: text/plain
+
+###
+
+
+###
+
+# GET all students
+GET http://localhost:8000/students
+Accept: application/json
+
+###
+
+# GET a specific user by ID
+GET http://localhost:8000/students/1
+Accept: application/json
+
+###
+
+# POST create a new user
+POST http://localhost:8000/students
+Content-Type: application/json
+
+{
+  "email": "test@email",
+  "gread": "25",
+  "id": 1,
+  "name": "Alice"
+}
+
+###
+
+# PUT update a user by ID
+PUT http://localhost:8000/students/1
+Content-Type: application/json
+
+{
+  "email": "test@email",
+  "gread": "25",
+  "id": 1,
+  "name": "Alice"
+}
+
+###
+
+# DELETE a user by ID
+DELETE http://localhost:8000/students/1
